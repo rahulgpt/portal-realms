@@ -3,8 +3,27 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import StyledButton from '../components/button';
 import TeamMeber from '../components/team-member';
+import { useState, useRef, useEffect } from 'react';
+import NET from 'vanta/dist/vanta.net.min';
+import * as THREE from 'three';
 
 export default function Home() {
+  const [vantaEffect, setVantaEffect] = useState(0)
+  const vantaRef = useRef(null)
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(NET({
+        el: vantaRef.current,
+        THREE,
+        color: 0xed8ca6,
+        backgroundColor: 0x0
+      }))
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy()
+    }
+  }, [vantaEffect])
+
   return (
     <div className={styles.container}>
       {/* Nav Section */}
@@ -32,7 +51,7 @@ export default function Home() {
 
       {/* Hero Section */}
 
-      <div className={styles.heroContainer}>
+      <div className={styles.heroContainer} ref={vantaRef}>
         <div className={styles.heading}>PORTAL REALMS</div>
         <div className={styles.subHeading}>LAUNCHING MID FEB 2022</div>
         <StyledButton marginRight="2rem" label1="PRIVATE MINT" label2="10 FEB - 8:00PM CET" />
