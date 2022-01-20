@@ -1,0 +1,38 @@
+
+
+.styledButton {
+    --padding: 0.3rem;
+    --position: -5px;
+    border: none;
+    padding: 0.8rem 3rem;
+    background: linear-gradient(93.77deg, #E1F484 0%, #A0B0FE 100.15%);
+    position: relative;
+    border: 2px solid linear-gradient(93.77deg, #E1F484 0%, #A0B0FE 100.15%);
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.styledButton::before {
+    content: "";
+    position: absolute;
+    top: var(--position);
+    right: var(--position);
+    background-color: #000;
+    padding: var(--padding);
+    transform: rotate(45deg);
+}
+
+.styledButton::after {
+    content: "";
+    position: absolute;
+    bottom: var(--position);
+    left: var(--position);
+    background-color: #000;
+    padding: var(--padding);
+    transform: rotate(45deg);
+}
+
+.transparentBg {
+    background: none;
+    background-color: transparent;
+}

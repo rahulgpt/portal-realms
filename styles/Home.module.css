@@ -1,116 +1,173 @@
 .container {
-  padding: 0 2rem;
+  padding: 0;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
+/* -------Common------- */
+.flex {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-grow: 1;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
+/* -------Nav Styles--------- */
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
+.nav {
+  padding: 2rem 3rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  justify-content: space-between;
 }
 
 .logo {
-  height: 1em;
-  margin-left: 0.5rem;
+  color: #fff;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.navElementsContainer {
+  color: #fff;
+  display: flex;
+}
+
+.navElement {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.navElement:last-of-type {
+  margin-right: 0;
+}
+
+.socialIcons {
+  display: flex;
+}
+
+.socialBG {
+  padding: 0.3rem;
+  background-color: #fff;
+  margin-right: 1rem;
+  border-radius: 5px 0;
+  padding-bottom: 0;
+  cursor: pointer;
+}
+
+.socialBG:last-of-type {
+  margin-right: 0;
+}
+
+/* -------Hero Section styles------- */
+
+@font-face {
+  font-family: "NeueMachinaRegular";
+  src: url("../assets/fonts/NeueMachina-Regular.otf");
+}
+
+@font-face {
+  font-family: "NeueMachinaBold";
+  src: url("../assets/fonts/NeueMachina-Ultrabold.otf");
+}
+
+.heroContainer {
+  padding: 8rem 0;
+  text-align: center;
+}
+
+.heading {
+  color: #fff;
+  font-size: 6rem;
+  font-weight: 700;
+  font-family: "NeueMachinaBold";
+}
+
+.subHeading {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "NeueMachinaRegular";
+  letter-spacing: 10px;
+  margin-bottom: 4rem;
+}
+
+.cardContainer {
+  margin-top: 5rem;
+}
+
+/* -------Story Section-------*/
+
+.storyContainer {
+  text-align: center;
+}
+
+.firstPara {
+  font-size: 1.5rem;
+  color: #A0B0FE;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.secondPara {
+  font-size: 0.9rem;
+  color: #fff;
+  margin-bottom: 4rem;
+}
+
+.storyContainer video {
+  margin: 8rem 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background: #232a34;
+}
+
+/* -------Team Styles------- */
+.teamContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.teamHeading {
+  color: #E1F484;
+  font-size: 2rem;
+  font-family: 'Space Mono', monospace;
+  margin-bottom: 2rem;
+}
+
+.teamSubHeading {
+  color: #efefef;
+  font-size: 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  font-weight: 400;
+  
+}
+
+.teamMembersContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 3rem;
+  grid-row-gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+
+/* -------Footer Styles------- */
+
+.footerContainer {
+  /* border: 1px solid white; */
+  text-align: center;
+  padding: 8rem 0 3rem 0;
+}
+
+.footerTagLine {
+  color: #E1F484;
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.footerLink {
+  color: #fff;
+  margin-right: 1rem;
+  margin-top: 8rem;
+  font-size: 0.8rem;
 }

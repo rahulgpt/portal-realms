@@ -1,0 +1,27 @@
+
+
+.container {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.teamMemberBG {
+    padding: 1rem;
+    /* background-color: #ECD6FD; */
+    border-radius: 20px;
+    margin-bottom: 0.8rem;
+}
+
+.teamMemeberTitle {
+    color: #fff;
+    font-size: 0.8rem;
+    font-family: 'Space Mono', monospace;
+    line-height: 10px;
+}
+
+.teamMemeberSubTitle {
+    color: #fff;
+    font-size: 0.8rem;
+    font-family: 'Space Mono', monospace;
+}
