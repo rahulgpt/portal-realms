@@ -2,11 +2,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import StyledButton from '../components/button';
+import RoadmapCard from '../components/roadmap-card';
 import TeamMeber from '../components/team-member';
 import { useState, useRef, useEffect } from 'react';
 import NET from 'vanta/dist/vanta.net.min';
 import * as THREE from 'three';
-
 
 export default function Home() {
   const [vantaEffect, setVantaEffect] = useState(0)
@@ -33,7 +33,7 @@ export default function Home() {
         <div className={styles.heading}>PORTAL REALMS</div>
         <div className={styles.subHeading}>LAUNCHING MID FEB 2022</div>
         <StyledButton marginRight="2rem" label1="PRIVATE MINT" label2="10 FEB - 8:00PM CET" />
-        <StyledButton label1="PRIVATE MINT" label2="10 FEB - 8:00PM CET" />
+        <StyledButton label1="PRIVATE MINT" bg={true} label2="10 FEB - 8:00PM CET" />
 
         <div className={styles.cardContainer}>
           <Image src='/images/Card_Bio.png' width={222} height={312} />
@@ -52,18 +52,55 @@ export default function Home() {
         <video autoPlay loop muted src='/video/hero_bg.mp4' type='video/mp4' />
       </div>
 
-      <div>
-        <div className={styles.yellowCirle}>
+      {/* CircleContent */}
 
+      <div className={styles.circleContentContainer}>
+        <div className={styles.circlesWrapper}>
+          {/* <div className={styles.upperArrowWrapper}>
+            <Image src='/images/arrow.svg' layout='fill' objectFit='contain' />
+          </div>
+          <div className={styles.bottomArrowWrapper}>
+            <Image src='/images/arrow.svg' layout='fill' objectFit='contain' />
+          </div> */}
+          <div className={styles.yellowCirle}>
+            <p>Be part of PortalRealms</p>
+          </div>
+          <div className={styles.transparentCircle}>
+            <p>Imagine a huge world map with zones and locations based on rich lore. Players will have to explore the world and travel to locations in order to collect all the cards they need to build the best deck they can to conquer the world.</p>
+          </div>
         </div>
-        <div className={styles.transparentCircle}>
+      </div>
 
+      {/* One Card Section */}
+      <div className={styles.cardSectionContainer} name='cards'>
+        <div className={styles.contentContainer}>
+          <h1>One Card,<br />Unlimited Uses</h1>
+          <p>By introducing cards which can only be farmed during a specific duration, it creates FOMO and hype and almost guaranteed earnings for any players who decide to farm those cards</p>
+        </div>
+        <div className={styles.imageContainer}>
+          <div className={styles.blackCardImageWrapper}>
+            <Image src='/images/Card-Backing-1.png' layout='fill' objectFit='contain' />
+          </div>
+          <div className={`${styles.blackCardImageWrapper} ${styles.blackCardAbsolute}`}>
+            <Image src='/images/Card-Backing-2.png' layout='fill' objectFit='contain' />
+          </div>
+        </div>
+      </div>
+
+      {/* Roadmap Section */}
+
+      <div className={styles.roadmapContainer} name='roadmap'>
+        <h1>Roadmap</h1>
+        <div className={styles.roadmapCardsContainer}>
+          <RoadmapCard image="/images/ellipse.svg" year="2022" content="Obtainable Platform Live Xela: Spaceship XR Alpha $CTZN Private Round" />
+          <RoadmapCard image="/images/ellipse.svg" year="2022" content="Obtainable Platform Live Xela: Spaceship XR Alpha $CTZN Private Round " />
+          <RoadmapCard image="/images/ellipse.svg" year="2022" content="Obtainable Platform Live Xela: Spaceship XR Alpha $CTZN Private Round " />
         </div>
       </div>
 
       {/* Team Section */}
 
-      <div className={styles.teamContainer}>
+      <div className={styles.teamContainer} name='team'>
         <div className={styles.teamHeading}>Meet the amazing team</div>
         <div className={styles.teamSubHeading}>The senior team behind Origami has decades of experience<br /> building software, communities, successful ventures and<br /> companies and merchandising game collectibles. Say hello!</div>
         <div className={styles.teamMembersContainer}>

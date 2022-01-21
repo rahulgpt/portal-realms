@@ -24,3 +24,9 @@
     font-size: 0.8rem;
     font-family: 'Space Mono', monospace;
 }
+
+.imageWrapper {
+    width: 130px;
+    height: 130px;
+    position: relative;
+}

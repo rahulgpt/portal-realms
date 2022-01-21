@@ -7,7 +7,9 @@ export default function TeamMember({ memTile, memSubTitle, color }) {
     return (
         <div className={styles.container}>
             <div className={styles.teamMemberBG} style={{ backgroundColor: color }}>
-                <Image src='/images/team-members/eugene.png' width={120} height={120} />
+                <div className={styles.imageWrapper}>
+                    <Image src='/images/team-members/eugene.png' layout='fill' objectFit='contain' />
+                </div>
             </div>
 
             <div className={styles.teamMemeberTitle}>Eugene Ling</div>

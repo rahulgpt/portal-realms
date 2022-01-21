@@ -30,14 +30,41 @@
 }
 
 .socialBG {
+    --padding: 0.3rem;
+    --position: -6px;
     padding: 0.3rem;
     background-color: #fff;
     margin-right: 1rem;
-    border-radius: 5px 0;
-    padding-bottom: 0;
     cursor: pointer;
+    position: relative;
+}
+
+.socialBG::before {
+    content: "";
+    position: absolute;
+    top: var(--position);
+    left: var(--position);
+    background-color: #000;
+    padding: var(--padding);
+    transform: rotate(45deg);
+}
+
+.socialBG::after {
+    content: "";
+    position: absolute;
+    bottom: var(--position);
+    right: var(--position);
+    background-color: #000;
+    padding: var(--padding);
+    transform: rotate(45deg);
 }
 
 .socialBG:last-of-type {
     margin-right: 0;
+}
+
+.imageWrapper {
+    width: 23px;
+    height: 23px;
+    position: relative;
 }

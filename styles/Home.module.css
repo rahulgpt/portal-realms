@@ -48,16 +48,15 @@
 }
 
 .firstPara {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #A0B0FE;
   margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-top: 8rem;
 }
 
 .secondPara {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: #fff;
-  margin-bottom: 4rem;
 }
 
 .storyContainer video {
@@ -74,7 +73,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  margin-bottom: 10rem;
 }
 
 .teamHeading {
@@ -101,6 +100,141 @@
   margin-bottom: 4rem;
 }
 
+/* -------Circles Section styles------- */
 
-/* -------Footer Styles------- */
+.circleContentContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8rem;
+}
 
+.circlesWrapper {
+  --width: 382px;
+  --transparent-circle-left: 330px;
+  position: relative;
+  width: calc(var(--width) * 2 - (var(--width) - var(--transparent-circle-left)));
+}
+
+.yellowCirle {
+  background-color: #E1F484;
+  width: var(--width, 382px);
+  height: 432px;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 60%;
+  box-shadow: 0px 10px 20px #E1F484;
+  font-family: 'Space Mono', monospace;
+}
+
+.transparentCircle {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  width: var(--width, 382px);
+  height: 432px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 60%;
+  position: absolute;
+  top: 0;
+  left: var(--transparent-circle-left);
+  backdrop-filter: blur(10px);
+  padding: 5rem;
+  box-shadow: inset 0px 39px 56px -36px rgba(255, 255, 255, 0.2), 
+              inset 0px 7px 11px -4px #FFFFFF, inset 0px -82px 68px -64px rgba(77, 80, 49, 0.3), 
+              inset 0px 98px 100px -48px rgba(233, 255, 172, 0.3), 
+              inset 0px 4px 18px rgba(201, 210, 146, 0.25), 
+              inset 0px 1px 0px rgba(250, 255, 222, 0.25);
+}
+
+
+
+/* -------Card Backing Section styles------- */
+
+.cardSectionContainer {
+  display: flex;
+  justify-content: center;
+  padding: 0 16rem;
+  margin: 16rem 0;
+}
+
+.contentContainer {
+  margin-right: 5rem;
+}
+
+.contentContainer h1 {
+  color: #E1F484;
+  font-family: 'Space Mono', monospace;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.contentContainer p {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.blackCardImageWrapper {
+  width: 309px;
+  height: 432px;
+}
+
+.blackCardAbsolute {
+  position: absolute;
+  top: -83px;
+  right: -83px;
+}
+
+/* -------Roadmap Section styles------- */
+
+.roadmapContainer {
+  --padding: 2rem;
+  --position: -33px;
+  border: 1px solid #E1F484;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 6rem 0;
+  margin: 0 8rem 8rem;
+  position: relative;
+}
+
+.roadmapContainer h1 {
+  color: #E1F484;
+  font-weight: 500;
+  font-family: 'Space Mono', monospace;
+  margin: 0;
+}
+
+.roadmapCardsContainer {
+  display: flex;
+}
+
+.roadmapContainer::before {
+  content: "";
+  position: absolute;
+  top: var(--position);
+  right: var(--position);
+  background-color: #000;
+  padding: var(--padding);
+  transform: rotate(45deg);
+  border-bottom: 1px solid #E1F484;
+}
+
+.roadmapContainer::after {
+  content: "";
+  position: absolute;
+  bottom: var(--position);
+  left: var(--position);
+  background-color: #000;
+  padding: var(--padding);
+  transform: rotate(45deg);
+  border-top: 1px solid #E1F484;
+}

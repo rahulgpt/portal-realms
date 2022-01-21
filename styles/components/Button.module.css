@@ -5,9 +5,7 @@
     --position: -5px;
     border: none;
     padding: 0.8rem 3rem;
-    background: linear-gradient(93.77deg, #E1F484 0%, #A0B0FE 100.15%);
     position: relative;
-    border: 2px solid linear-gradient(93.77deg, #E1F484 0%, #A0B0FE 100.15%);
     cursor: pointer;
     margin-right: 2rem;
 }
@@ -32,7 +30,6 @@
     transform: rotate(45deg);
 }
 
-.transparentBg {
-    background: none;
-    background-color: transparent;
+.styledButtonBG {
+    background: linear-gradient(93.77deg, #E1F484 0%, #A0B0FE 100.15%);
 }

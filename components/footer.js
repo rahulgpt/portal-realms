@@ -1,15 +1,41 @@
 import styles from '../styles/components/Footer.module.css';
 import Image from 'next/image';
+import NET from 'vanta/dist/vanta.net.min';
+import * as THREE from 'three';
+import { useState, useRef, useEffect } from 'react';
 
 const Footer = () => {
+    const [vantaEffect, setVantaEffect] = useState(0)
+    const vantaRef = useRef(null)
+    useEffect(() => {
+        if (!vantaEffect) {
+            setVantaEffect(NET({
+                el: vantaRef.current,
+                THREE,
+                color: 0xed8ca6,
+                backgroundColor: 0x0
+            }))
+        }
+        return () => {
+            if (vantaEffect) vantaEffect.destroy()
+        }
+    }, [vantaEffect])
+
     return (
-        <div className={styles.footerContainer}>
+        <div className={styles.footerContainer} ref={vantaRef}>
             <div className={styles.footerTagLine}>Join the Meta Factions<br /> Fantaverse</div>
 
             <div className={styles.flex}>
-                <Image src="/icons/discord.svg" width={50} height={50} />
-                <Image src="/icons/telegram.svg" width={50} height={50} />
-                <Image src="/icons/twitter.svg" width={50} height={50} />
+                <div className={styles.imageWrapper}>
+                    <Image src="/icons/discord-white.svg" layout='fill' objectFit='contain' />
+                </div>
+                <div className={styles.imageWrapper}>
+                    <Image src="/icons/telegram-white.svg" layout='fill' objectFit='contain' />
+                </div>
+                <div className={styles.imageWrapper}>
+                    <Image src="/icons/twitter-white.svg" layout='fill' objectFit='contain' />
+                </div>
+
             </div>
 
             <div className={styles.flex}>
