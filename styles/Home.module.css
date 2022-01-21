@@ -2,55 +2,6 @@
   padding: 0;
 }
 
-/* -------Common------- */
-.flex {
-  display: flex;
-  justify-content: center;
-}
-
-/* -------Nav Styles--------- */
-
-.nav {
-  padding: 2rem 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  color: #fff;
-}
-
-.navElementsContainer {
-  color: #fff;
-  display: flex;
-}
-
-.navElement {
-  margin-right: 1rem;
-  cursor: pointer;
-}
-
-.navElement:last-of-type {
-  margin-right: 0;
-}
-
-.socialIcons {
-  display: flex;
-}
-
-.socialBG {
-  padding: 0.3rem;
-  background-color: #fff;
-  margin-right: 1rem;
-  border-radius: 5px 0;
-  padding-bottom: 0;
-  cursor: pointer;
-}
-
-.socialBG:last-of-type {
-  margin-right: 0;
-}
 
 /* -------Hero Section styles------- */
 
@@ -153,22 +104,3 @@
 
 /* -------Footer Styles------- */
 
-.footerContainer {
-  /* border: 1px solid white; */
-  text-align: center;
-  padding: 8rem 0 3rem 0;
-}
-
-.footerTagLine {
-  color: #E1F484;
-  font-size: 4rem;
-  font-weight: 500;
-  margin-bottom: 4rem;
-}
-
-.footerLink {
-  color: #fff;
-  margin-right: 1rem;
-  margin-top: 8rem;
-  font-size: 0.8rem;
-}

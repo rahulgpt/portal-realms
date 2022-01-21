@@ -7,6 +7,7 @@ import { useState, useRef, useEffect } from 'react';
 import NET from 'vanta/dist/vanta.net.min';
 import * as THREE from 'three';
 
+
 export default function Home() {
   const [vantaEffect, setVantaEffect] = useState(0)
   const vantaRef = useRef(null)
@@ -26,31 +27,8 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      {/* Nav Section */}
-      <nav className={styles.nav}>
-        <div className={styles.logo}>PORTAL REALMS</div>
-        <div className={styles.navElementsContainer}>
-          <div href='/' className={styles.navElement}>Lore</div>
-          <div href='/' className={styles.navElement}>Cards</div>
-          <div href='/' className={styles.navElement}>Roadmap</div>
-          <div href='/' className={styles.navElement}>FAQ</div>
-          <div href='/' className={styles.navElement}>Team</div>
-        </div>
-        <div className={styles.socialIcons}>
-          <div className={styles.socialBG}>
-            <Image src="/icons/twitter.svg" width={23} height={23} />
-          </div>
-          <div className={styles.socialBG}>
-            <Image src="/icons/discord.svg" width={23} height={23} />
-          </div>
-          <div className={styles.socialBG}>
-            <Image src="/icons/telegram.svg" width={23} height={23} />
-          </div>
-        </div>
-      </nav>
 
       {/* Hero Section */}
-
       <div className={styles.heroContainer} ref={vantaRef}>
         <div className={styles.heading}>PORTAL REALMS</div>
         <div className={styles.subHeading}>LAUNCHING MID FEB 2022</div>
@@ -97,24 +75,6 @@ export default function Home() {
           <TeamMeber memTile="Eugene" memSubTitle="Creative Director" color="#F9F0D9" />
           <TeamMeber memTile="Eugene" memSubTitle="Creative Director" color="#DCFCFF" />
           <TeamMeber memTile="Eugene" memSubTitle="Creative Director" color="#F9F0D9" />
-        </div>
-      </div>
-
-      {/* Footer Section */}
-
-      <div className={styles.footerContainer}>
-        <div className={styles.footerTagLine}>Join the Meta Factions<br /> Fantaverse</div>
-
-        <div className={styles.flex}>
-          <Image src="/icons/discord.svg" width={50} height={50} />
-          <Image src="/icons/telegram.svg" width={50} height={50} />
-          <Image src="/icons/twitter.svg" width={50} height={50} />
-        </div>
-
-        <div className={styles.flex}>
-          <div className={styles.footerLink}>© Portal Realms</div>
-          <div className={styles.footerLink}>Terms {'&'} Conditions</div>
-          <div className={styles.footerLink}>Privacy Policy</div>
         </div>
       </div>
     </div>
