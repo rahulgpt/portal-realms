@@ -21,14 +21,14 @@
   background-color: #000;
 }
 
-.heading {
+.title {
   color: #fff;
   font-size: 6rem;
   font-weight: 700;
   font-family: "NeueMachinaBold";
 }
 
-.subHeading {
+.subTitle {
   color: #fff;
   font-size: 1rem;
   font-weight: 400;
@@ -39,6 +39,17 @@
 
 .cardContainer {
   margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.imageWrapper {
+  --height: 312px;
+  --width: 222px;
+  width: var(--width);
+  height: var(--height);
+  position: relative;
 }
 
 /* -------Story Section-------*/
@@ -237,4 +248,418 @@
   padding: var(--padding);
   transform: rotate(45deg);
   border-top: 1px solid #E1F484;
+}
+
+/* -------FAQ Section styles------- */
+
+.faqConatiner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10rem;
+}
+
+.faqConatiner h1 {
+  color: #E1F484;
+  margin: 0;
+  margin-bottom: 4rem;
+  font-weight: 400;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  /* -------Hero Section styles------- */
+
+  .title {
+    font-size: 5rem;
+  }
+
+  .subTitle {
+    font-size: 0.9rem;
+  }
+
+  .imageWrapper {
+    width: calc(var(--width) - 30px);
+    height: calc(var(--height) - 30px);
+  }
+
+  /* -------Story Section-------*/
+
+  .firstPara {
+    font-size: 1.5rem;
+  }
+
+  .secondPara {
+    font-size: 1rem;
+  }
+
+  /* -------Circles Section styles------- */
+
+  .yellowCirle {
+    width: calc(var(--width, 382px) - 30px);
+    height: calc(432px - 30px);
+    font-size: 2rem;
+  }
+  
+  .transparentCircle {
+    width: calc(var(--width, 382px) - 30px);
+    height: calc(432px - 30px);
+    font-size: 1rem;
+  }
+  
+  
+  /* -------Card Backing Section styles------- */
+
+  .cardSectionContainer {
+    padding: 0 4rem;
+    justify-content: flex-start;
+  }
+
+  .contentContainer {
+    max-width: 40vw;
+  }
+
+  .contentContainer h1 {
+    color: #E1F484;
+    font-family: 'Space Mono', monospace;
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+
+  .blackCardImageWrapper {
+    width: calc(309px - 30px);
+    height: calc(432px - 30px);
+  }
+
+  /* -------Roadmap Section styles------- */
+
+  .roadmapContainer {
+    margin: 0 5% 8rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* -------Card Backing Section styles------- */
+
+  .cardSectionContainer {
+    padding: 0 4rem;
+    justify-content: flex-start;
+  }
+
+  .contentContainer {
+    margin-right: 2rem;
+    max-width: 60%;
+  }
+
+  .contentContainer h1 {
+    font-size: 2rem;
+  }
+
+  .contentContainer p {
+    font-size: 1rem;
+  }
+
+  .imageContainer {
+    position: relative;
+  }
+
+  .blackCardImageWrapper {
+    width: 209px;
+    height: 332px;
+  }
+
+  .blackCardAbsolute {
+    position: absolute;
+    top: -83px;
+    right: -83px;
+  }
+}
+
+/* -------Circles Section styles------- */
+
+.circlesWrapper {
+  width: 684px;
+
+}
+
+@media only screen and (max-width: 768px) {
+  /* -------Hero Section styles------- */
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .subTitle {
+    font-size: 0.8rem;
+  }
+
+  .imageWrapper {
+    width: calc(var(--width) - 50px);
+    height: calc(var(--height) - 50px);
+  }
+
+  /* -------Story Section-------*/
+
+  .firstPara {
+    font-size: 1.5rem;
+  }
+
+  .secondPara {
+    font-size: 1rem;
+  }
+
+  .storyContainer {
+    padding: 1rem;
+  }
+
+  /* -------Circles Section styles------- */
+
+  .yellowCirle {
+    width: calc(var(--width, 382px) - 100px);
+    height: calc(432px - 100px);
+    font-size: 1.4rem;
+  }
+  
+  .transparentCircle {
+    width: calc(var(--width, 382px) - 100px);
+    height: calc(432px - 100px);
+    font-size: 0.8rem;
+  }
+
+  .circlesWrapper {
+    --transparent-circle-left: 230px;
+    width: 516px;
+  }
+
+  .circleContentContainer {
+    margin-bottom: 2rem;
+  }
+  
+  
+  /* -------Card Backing Section styles------- */
+
+  .contentContainer h1 {
+    font-size: 1.8rem;
+  }
+
+  .contentContainer p {
+    font-size: 1rem;
+  }
+
+  .blackCardImageWrapper {
+    width: calc(209px - 50px);
+    height: calc(332px - 50px);
+  }
+  
+  .blackCardAbsolute {
+    position: absolute;
+    top: -43px;
+    right: -43px;
+  }
+
+  .cardSectionContainer {
+    margin: 10rem 0;
+    padding: 0 4rem;
+    justify-content: flex-start;
+  }
+
+  .contentContainer {
+    margin-right: 4rem;
+    max-width: 50%;
+  }
+
+  /* -------Roadmap Section styles------- */
+
+  .roadmapContainer {
+    margin: 0 5% 8rem;
+  }
+
+  .roadmapCardsContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 4rem;
+  }
+
+  /* -------Team Styles------- */
+  .teamContainer {
+    padding: 0 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .teamMembersContainer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .teamHeading {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .teamSubHeading {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* -------Hero Section styles------- */
+
+  .heroContainer {
+    overflow: hidden;
+  }
+
+  .cardContainer {
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0 1rem;
+  }
+
+  .title {
+    font-size: 10vw;
+    margin-bottom: 1rem;
+  }
+
+  .subTitle {
+    font-size: 0.7rem;
+    font-weight: 500; 
+    letter-spacing: 3px;
+  }
+
+  .imageWrapper {
+    width: calc(var(--width) - 115px);
+    height: calc(var(--height) - 115px);
+  }
+
+  /* -------Story Section-------*/
+
+  .firstPara {
+    font-size: 1.2rem;
+    margin: 8rem 1rem 2rem 1rem;
+  }
+
+  .secondPara {
+    font-size: 0.8rem;
+    margin: 0 1rem;
+  }
+
+
+  /* -------Team Styles------- */
+
+  .teamContainer {
+    margin-bottom: 4rem;
+  }
+
+  .teamMembersContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .teamSubHeading {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  /* -------Circles Section styles------- */
+
+  .circleContentContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8rem;
+    text-align: left;
+  }
+  
+  .circlesWrapper {
+    --width: 382px;
+    --transparent-circle-left: 330px;
+    position: relative;
+    width: calc(var(--width) * 2 - (var(--width) - var(--transparent-circle-left)));
+    flex-direction: column;
+    padding: 0 2rem;
+    align-items: center;
+  }
+
+  .yellowCirle {
+    width: 100%;
+    height: fit-content;
+    font-size: 2rem;
+    background-color: transparent;
+    box-shadow: none;
+    color: #ffffff;
+    font-weight: 500;
+    text-align: left;
+  }
+  
+  .transparentCircle {
+    width: 100%;
+    height: fit-content;
+    font-size: 0.8rem;
+    padding: 0rem;
+    background-color: transparent;
+    box-shadow: none;
+    position: initial;
+    border-radius: 1px;
+    backdrop-filter: none;
+    text-align: left;
+  }
+
+  /* -------Card Backing Section styles------- */
+
+  .contentContainer {
+    min-width: 100%;
+    margin-right: 0;
+    margin-bottom: 4rem;
+  }
+
+  .contentContainer h1 {
+    color: #E1F484;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .blackCardImageWrapper {
+    width: calc(309px - 150px);
+    height: calc(432px - 150px);
+
+  }
+
+  .cardSectionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+    margin: 4rem 0;
+  }
+
+  .contentContainer p {
+    font-size: 0.9rem;
+  }
+  
+  .imageContainer {
+    position: relative;
+  }
+
+  .blackCardAbsolute {
+    top: -33px;
+    right: -33px;
+  }
+
+  /* -------Roadmap Section styles------- */
+
+  .roadmapCardsContainer {
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .roadmapContainer {
+    padding: 3rem 0;
+  }
+  
 }

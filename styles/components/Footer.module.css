@@ -1,5 +1,4 @@
 .footerContainer {
-    /* border: 1px solid white; */
     text-align: center;
     padding: 8rem 0 3rem 0;
 }
@@ -9,6 +8,7 @@
     font-size: 4rem;
     font-weight: 500;
     margin-bottom: 4rem;
+    padding: 0 1rem;
 }
 
 .footerLink {
@@ -33,4 +33,29 @@
 
 .imageWrapper:last-of-type {
     margin-right: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .footerContainer {
+        padding: 3rem 1rem;
+    }
+
+    .footerTagLine {
+        font-size: 3rem;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .footerContainer {
+        padding: 3rem 1rem;
+    }
+
+    .footerTagLine {
+        font-size: 2rem;
+    }
+
+    .footerLink {
+        margin-top: 6rem;
+    }
 }

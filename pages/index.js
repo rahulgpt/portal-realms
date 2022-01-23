@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import StyledButton from '../components/button';
 import RoadmapCard from '../components/roadmap-card';
 import TeamMeber from '../components/team-member';
+import FAQElement from '../components/faq-element';
 import { useState, useRef, useEffect } from 'react';
 import NET from 'vanta/dist/vanta.net.min';
 import * as THREE from 'three';
@@ -30,17 +31,27 @@ export default function Home() {
 
       {/* Hero Section */}
       <div className={styles.heroContainer} ref={vantaRef}>
-        <div className={styles.heading}>PORTAL REALMS</div>
-        <div className={styles.subHeading}>LAUNCHING MID FEB 2022</div>
+        <div className={styles.title}>PORTAL REALMS</div>
+        <div className={styles.subTitle}>LAUNCHING MID FEB 2022</div>
         <StyledButton marginRight="2rem" label1="PRIVATE MINT" label2="10 FEB - 8:00PM CET" />
         <StyledButton label1="PRIVATE MINT" bg={true} label2="10 FEB - 8:00PM CET" />
 
         <div className={styles.cardContainer}>
-          <Image src='/images/Card_Bio.png' width={222} height={312} />
-          <Image src='/images/Card_Invictus.png' width={222} height={312} />
-          <Image src='/images/Card_Nova.png' width={222} height={312} />
-          <Image src='/images/Card_Lush.png' width={222} height={312} />
-          <Image src='/images/Card_Secluded.png' width={222} height={312} />
+          <div className={styles.imageWrapper}>
+            <Image src='/images/Card_Bio.png' layout='fill' objectFit='contain' />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image src='/images/Card_Invictus.png' layout='fill' objectFit='contain' />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image src='/images/Card_Nova.png' layout='fill' objectFit='contain' />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image src='/images/Card_Lush.png' layout='fill' objectFit='contain' />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image src='/images/Card_Secluded.png' layout='fill' objectFit='contain' />
+          </div>
         </div>
       </div>
 
@@ -97,6 +108,17 @@ export default function Home() {
           <RoadmapCard image="/images/ellipse.svg" year="2022" content="Obtainable Platform Live Xela: Spaceship XR Alpha $CTZN Private Round " />
         </div>
       </div>
+
+      {/* FAQ Section */}
+
+      {/* Todo */}
+      {/* <div className={styles.faqConatiner}>
+        <h1>FAQ</h1>
+        <FAQElement label='About Portal' content='Some dummy content' />
+        <FAQElement label='Shipping' content='Some dummy content' />
+        <FAQElement label='How it works' content='Some dummy content' />
+        <FAQElement label='Lorem ipsum' content='Some dummy content' />
+      </div> */}
 
       {/* Team Section */}
 

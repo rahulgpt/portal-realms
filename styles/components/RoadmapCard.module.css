@@ -20,3 +20,19 @@
     margin: 0.5rem 0;
 }
 
+
+@media only screen and (max-width: 900px) {
+    .container {
+        --width: 180px;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .container {
+        margin-right: 0;
+    }
+
+    .container p {
+        font-size: 0.8rem;
+    }
+}

@@ -10,6 +10,10 @@
     margin-right: 2rem;
 }
 
+.styledButton:last-of-type {
+    margin-right: 0;
+}
+
 .styledButton::before {
     content: "";
     position: absolute;
@@ -32,4 +36,12 @@
 
 .styledButtonBG {
     background: linear-gradient(93.77deg, #E1F484 0%, #A0B0FE 100.15%);
+}
+
+@media only screen and (max-width: 480px) {
+    .styledButton {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.8rem;
+        margin-right: 0.5rem;
+    }
 }

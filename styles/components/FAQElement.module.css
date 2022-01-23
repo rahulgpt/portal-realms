@@ -1,0 +1,35 @@
+
+.container {
+    width: 50%;
+    display: flex;
+    /* border-bottom: 0.5px solid white; */
+    align-items: center;
+    padding: 1rem 0;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.container p {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.moreIcon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.contentContainer {
+    border: 1px solid white;
+    width: 50%;
+    background-color: #ffffff;
+    /* padding: 1rem; */
+    height: 1px;
+    transition: height 0.5s;
+}
+
+.contentContainer p {
+    margin: 0;
+}

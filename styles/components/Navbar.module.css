@@ -7,6 +7,14 @@
     justify-content: space-between;
 }
 
+.hamIcon {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
 .logo {
     color: #fff;
 }
@@ -67,4 +75,87 @@
     width: 23px;
     height: 23px;
     position: relative;
+}
+
+/* --------Overlay Menu---------*/
+
+.overlayMenuContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    width: 100vw;
+    height: 100vh;  
+    padding: 6rem 2rem;
+    color: #ffffff;
+    z-index: 5;
+    overflow: hidden;
+    transition: width 0.5s;
+}
+
+.overlayMenuLinks {
+    margin-bottom: 3rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.overlaySocialIcons {
+    display: flex;
+}
+
+.overlayClose {
+    position: fixed;
+    z-index: 10;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.overlayLinkElement {
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+    .navElementsContainer {
+        display: none;
+    }
+
+    .socialIcons {
+        display: none;
+    }
+
+    .hamIcon {
+        display: block;
+    }
+
+    .overlayMenuContainer {
+        padding: 6rem 4rem;
+    }
+
+    .overlayLinkElement {
+        font-size: 1.3rem;
+    }
+
+    .nav {
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .nav {
+        padding: 1.5rem 1rem;
+    }
+
+    .overlayLinkElement {
+        font-size: 1rem;
+    }
+
+    .overlayMenuContainer {
+        padding: 6rem 2rem;
+    }
 }

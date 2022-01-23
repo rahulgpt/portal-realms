@@ -1,5 +1,4 @@
 
-
 .container {
     width: fit-content;
     display: flex;
@@ -26,7 +25,24 @@
 }
 
 .imageWrapper {
-    width: 130px;
-    height: 130px;
+    --width: 130px;
+    width: var(--width);
+    height: var(--width);
     position: relative;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .imageWrapper {
+        --width: 100px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .teamMemberBG {
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+    }
 }
