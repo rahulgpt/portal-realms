@@ -23,7 +23,7 @@ const Footer = () => {
 
     return (
         <div className={styles.footerContainer} ref={vantaRef}>
-            <div className={styles.footerTagLine}>Join the Meta Factions<br /> Fantaverse</div>
+            <div className={styles.footerTagLine}>See you on the<br /> other side</div>
 
             <div className={styles.flex}>
                 <div className={styles.imageWrapper}>

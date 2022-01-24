@@ -19,13 +19,27 @@
   padding: 8rem 0;
   text-align: center;
   background-color: #000;
+  position: relative;
+}
+
+.heroBG {
+  --dimension: 1400px;
+  width: var(--dimension);
+  height: var(--dimension);
+  border-radius: 50%;
+  position: absolute;
+  top: 300px;
+  box-shadow: inset 0px 43.8861px 63.0159px -40.5103px rgba(255, 255, 255, 0.2), inset 0px 3px 12.3781px -4.50114px #FFFFFF, inset 0px -92.2734px 76.5194px -72.0182px rgba(65, 134, 135, 0.3), inset 0px 110.278px 112.528px -54.0137px rgba(180, 254, 255, 0.3), inset 0px 4.50114px 20.2551px rgba(163, 220, 221, 0.3), inset 0px 1.12528px 45.0114px #D6FFFF;
+  backdrop-filter: blur(112.528px);
+  clip-path: inset(0 0 90% 0);
 }
 
 .title {
-  color: #fff;
+  color: var(--theme-color);
   font-size: 6rem;
-  font-weight: 700;
-  font-family: "NeueMachinaBold";
+  /* font-weight: 400; */
+  font-family: "NeueMachinaRegular";
+  letter-spacing: 10px;
 }
 
 .subTitle {
@@ -38,46 +52,34 @@
 }
 
 .cardContainer {
+  --height: 312px;
+  --width: 222px;
+  --middle-card-scale: 50px;
   margin-top: 5rem;
   display: flex;
   justify-content: center;
   padding: 0 2rem;
-}
-
-.imageWrapper {
-  --height: 312px;
-  --width: 222px;
-  width: var(--width);
-  height: var(--height);
   position: relative;
 }
 
-/* -------Story Section-------*/
-
-.storyContainer {
-  text-align: center;
+.imageWrapper {
+  width: var(--width);
+  height: var(--height);
+  position: relative;
+  margin-right: calc(var(--width) - var(--middle-card-scale));
 }
 
-.firstPara {
-  font-size: 1.8rem;
-  color: #A0B0FE;
-  margin-bottom: 2rem;
-  margin-top: 8rem;
+.imageWrapper:last-of-type {
+  margin-right: 0;
 }
 
-.secondPara {
-  font-size: 1.2rem;
-  color: #fff;
+.centerImageWrapper {
+  position: absolute;
+  width: calc(var(--width) + var(--middle-card-scale));
+  height: calc(var(--height) + var(--middle-card-scale));
+  top: calc(-1 * (var(--middle-card-scale) / 2));
 }
 
-.storyContainer video {
-  margin: 8rem 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  background: #232a34;
-}
 
 /* -------Team Styles------- */
 .teamContainer {
@@ -88,7 +90,7 @@
 }
 
 .teamHeading {
-  color: #E1F484;
+  color: var(--theme-color);
   font-size: 2rem;
   font-family: 'Space Mono', monospace;
   margin-bottom: 2rem;
@@ -111,63 +113,62 @@
   margin-bottom: 4rem;
 }
 
-/* -------Circles Section styles------- */
+/* -------Portal Realms Section styles------- */
 
-.circleContentContainer {
+.prContainer {
+  /* border: 1px solid white; */
   display: flex;
   justify-content: center;
-  margin-bottom: 8rem;
-}
-
-.circlesWrapper {
-  --width: 382px;
-  --transparent-circle-left: 330px;
   position: relative;
-  width: calc(var(--width) * 2 - (var(--width) - var(--transparent-circle-left)));
+  padding: 7rem;
+  margin-top: 6rem;
 }
 
-.yellowCirle {
-  background-color: #E1F484;
-  width: var(--width, 382px);
-  height: 432px;
-  font-size: 3rem;
+.prContent {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  max-width: 300px;
   text-align: center;
-  border-radius: 60%;
-  box-shadow: 0px 10px 20px #E1F484;
-  font-family: 'Space Mono', monospace;
 }
 
-.transparentCircle {
-  background-color: rgba(255, 255, 255, 0.1);
+.prContainer h1 {
+  color: var(--theme-color);
+  margin: 0;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'NeueMachinaRegular', monospace;;
+}
+
+.prContainer p {
   color: #ffffff;
-  width: var(--width, 382px);
-  height: 432px;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  border-radius: 60%;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.gridImage {
+  --dimension: 700px;
+  width: var(--dimension);
+  height: var(--dimension);
   position: absolute;
-  top: 0;
-  left: var(--transparent-circle-left);
-  backdrop-filter: blur(10px);
-  padding: 5rem;
-  box-shadow: inset 0px 39px 56px -36px rgba(255, 255, 255, 0.2), 
-              inset 0px 7px 11px -4px #FFFFFF, inset 0px -82px 68px -64px rgba(77, 80, 49, 0.3), 
-              inset 0px 98px 100px -48px rgba(233, 255, 172, 0.3), 
-              inset 0px 4px 18px rgba(201, 210, 146, 0.25), 
-              inset 0px 1px 0px rgba(250, 255, 222, 0.25);
+  top: -100px;
+}
+
+.ringImage {
+  --dimension: 900px;
+  width: var(--dimension);
+  height: var(--dimension);
+  position: absolute;
+  top: -200px;
 }
 
 
-
-/* -------Card Backing Section styles------- */
+/* -------Card Section styles------- */
 
 .cardSectionContainer {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 0 16rem;
   margin: 16rem 0;
 }
@@ -177,44 +178,137 @@
 }
 
 .contentContainer h1 {
-  color: #E1F484;
-  font-family: 'Space Mono', monospace;
+  color: var(--theme-color);
+  font-family: 'NeueMachinaRegular', monospace;
   font-size: 3rem;
   font-weight: 400;
 }
 
-.contentContainer p {
+.contentContainer h3 {
   color: #ffffff;
-  font-weight: 400;
+  font-weight: lighter;
+  font-size: 1rem;
+  margin-bottom: 2rem;
 }
 
-.imageContainer {
+.contentContainer p {
+  color: #ffffff;
+  font-weight: lighter;
+  margin: 0;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contentContainer span {
+  color: var(--theme-color);
+}
+
+.contentContainer button {
+  background-color: var(--theme-color);
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.cardSectionImages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
-.blackCardImageWrapper {
+.blackCardImage {
   width: 309px;
   height: 432px;
+  position: relative;
 }
 
-.blackCardAbsolute {
+.bubbleImage {
+  --dimension: 600px;
+  width: var(--dimension);
+  height: var(--dimension);
   position: absolute;
-  top: -83px;
-  right: -83px;
+}
+
+.purpleGrid {
+  --dimension: 1000px;
+  width: var(--dimension);
+  height: var(--dimension);
+  position: absolute;
+}
+
+.cardSectionBanner {
+  --position: 20px;
+  --dimension: 80px;
+  background-color: var(--theme-color);
+  position: absolute;
+  top: var(--position);
+  right: var(--position);
+  border-radius: 50%;
+  width: var(--dimension);
+  height: var(--dimension);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.cardSectionBanner h5 {
+  margin: 0;
+  margin-bottom: 0.1rem;
+  font-size: 1rem;
+}
+
+.cardSectionBanner p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+/* -------NFT Feat Section styles------- */
+
+.nftFeatContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8rem;
+  font-family: 'NeueMachinaRegular', monospace;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.nftFeatCardsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nftFeatContainer h1 {
+  color: var(--theme-color);
+  margin: 0;
+  margin-bottom: 3rem;
 }
 
 /* -------Roadmap Section styles------- */
 
 .roadmapContainer {
-  --padding: 2rem;
-  --position: -33px;
-  border: 1px solid #E1F484;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  padding: 6rem 0;
-  margin: 0 8rem 8rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
   position: relative;
+  height: 100vh;
+  margin-bottom: 8rem;
+}
+
+.roadmapBG {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  position: absolute;
 }
 
 .roadmapContainer h1 {
@@ -226,28 +320,6 @@
 
 .roadmapCardsContainer {
   display: flex;
-}
-
-.roadmapContainer::before {
-  content: "";
-  position: absolute;
-  top: var(--position);
-  right: var(--position);
-  background-color: #000;
-  padding: var(--padding);
-  transform: rotate(45deg);
-  border-bottom: 1px solid #E1F484;
-}
-
-.roadmapContainer::after {
-  content: "";
-  position: absolute;
-  bottom: var(--position);
-  left: var(--position);
-  background-color: #000;
-  padding: var(--padding);
-  transform: rotate(45deg);
-  border-top: 1px solid #E1F484;
 }
 
 /* -------FAQ Section styles------- */
@@ -281,30 +353,6 @@
   .imageWrapper {
     width: calc(var(--width) - 30px);
     height: calc(var(--height) - 30px);
-  }
-
-  /* -------Story Section-------*/
-
-  .firstPara {
-    font-size: 1.5rem;
-  }
-
-  .secondPara {
-    font-size: 1rem;
-  }
-
-  /* -------Circles Section styles------- */
-
-  .yellowCirle {
-    width: calc(var(--width, 382px) - 30px);
-    height: calc(432px - 30px);
-    font-size: 2rem;
-  }
-  
-  .transparentCircle {
-    width: calc(var(--width, 382px) - 30px);
-    height: calc(432px - 30px);
-    font-size: 1rem;
   }
   
   
@@ -375,12 +423,6 @@
   }
 }
 
-/* -------Circles Section styles------- */
-
-.circlesWrapper {
-  width: 684px;
-
-}
 
 @media only screen and (max-width: 768px) {
   /* -------Hero Section styles------- */
@@ -396,43 +438,6 @@
   .imageWrapper {
     width: calc(var(--width) - 50px);
     height: calc(var(--height) - 50px);
-  }
-
-  /* -------Story Section-------*/
-
-  .firstPara {
-    font-size: 1.5rem;
-  }
-
-  .secondPara {
-    font-size: 1rem;
-  }
-
-  .storyContainer {
-    padding: 1rem;
-  }
-
-  /* -------Circles Section styles------- */
-
-  .yellowCirle {
-    width: calc(var(--width, 382px) - 100px);
-    height: calc(432px - 100px);
-    font-size: 1.4rem;
-  }
-  
-  .transparentCircle {
-    width: calc(var(--width, 382px) - 100px);
-    height: calc(432px - 100px);
-    font-size: 0.8rem;
-  }
-
-  .circlesWrapper {
-    --transparent-circle-left: 230px;
-    width: 516px;
-  }
-
-  .circleContentContainer {
-    margin-bottom: 2rem;
   }
   
   
@@ -534,18 +539,6 @@
     height: calc(var(--height) - 115px);
   }
 
-  /* -------Story Section-------*/
-
-  .firstPara {
-    font-size: 1.2rem;
-    margin: 8rem 1rem 2rem 1rem;
-  }
-
-  .secondPara {
-    font-size: 0.8rem;
-    margin: 0 1rem;
-  }
-
 
   /* -------Team Styles------- */
 
@@ -564,49 +557,6 @@
   .teamSubHeading {
     text-align: left;
     font-size: 1rem;
-  }
-
-  /* -------Circles Section styles------- */
-
-  .circleContentContainer {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 8rem;
-    text-align: left;
-  }
-  
-  .circlesWrapper {
-    --width: 382px;
-    --transparent-circle-left: 330px;
-    position: relative;
-    width: calc(var(--width) * 2 - (var(--width) - var(--transparent-circle-left)));
-    flex-direction: column;
-    padding: 0 2rem;
-    align-items: center;
-  }
-
-  .yellowCirle {
-    width: 100%;
-    height: fit-content;
-    font-size: 2rem;
-    background-color: transparent;
-    box-shadow: none;
-    color: #ffffff;
-    font-weight: 500;
-    text-align: left;
-  }
-  
-  .transparentCircle {
-    width: 100%;
-    height: fit-content;
-    font-size: 0.8rem;
-    padding: 0rem;
-    background-color: transparent;
-    box-shadow: none;
-    position: initial;
-    border-radius: 1px;
-    backdrop-filter: none;
-    text-align: left;
   }
 
   /* -------Card Backing Section styles------- */

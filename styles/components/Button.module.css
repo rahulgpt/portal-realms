@@ -2,12 +2,15 @@
 
 .styledButton {
     --padding: 0.3rem;
-    --position: -5px;
+    --position: -6px;
     border: none;
     padding: 0.8rem 3rem;
     position: relative;
     cursor: pointer;
     margin-right: 2rem;
+    border: 1px solid var(--theme-color);
+    background: transparent;
+    color: var(--theme-color);
 }
 
 .styledButton:last-of-type {
@@ -22,6 +25,7 @@
     background-color: #000;
     padding: var(--padding);
     transform: rotate(45deg);
+    border-bottom: 1px solid var(--theme-color);
 }
 
 .styledButton::after {
@@ -32,10 +36,12 @@
     background-color: #000;
     padding: var(--padding);
     transform: rotate(45deg);
+    border-top: 1px solid var(--theme-color);
 }
 
 .styledButtonBG {
-    background: linear-gradient(93.77deg, #E1F484 0%, #A0B0FE 100.15%);
+    background: var(--theme-color);
+    color: #000
 }
 
 @media only screen and (max-width: 480px) {

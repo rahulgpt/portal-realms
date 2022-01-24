@@ -8,14 +8,19 @@ const Navbar = () => {
 
     return (
         <nav className={styles.nav}>
-            <div className={styles.logo}>PORTAL REALMS</div>
-            <div className={styles.navElementsContainer}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+                <div className={styles.logoImageWrapper} onClick={() => setOverlay(!overlay)}>
+                    <Image src="/images/logo.svg" layout='fill' objectFit='contain' />
+                </div>
+                <div className={styles.logo}>PORTAL REALMS</div>
+            </div>
+            {/* <div className={styles.navElementsContainer}>
                 <Link to='/' smooth className={styles.navElement}>Lore</Link>
                 <Link to='cards' smooth className={styles.navElement}>Cards</Link>
                 <Link to='roadmap' smooth className={styles.navElement}>Roadmap</Link>
                 <Link to='/' smooth className={styles.navElement}>FAQ</Link>
                 <Link to='team' smooth className={styles.navElement}>Team</Link>
-            </div>
+            </div> */}
             <div className={styles.hamIcon} onClick={() => setOverlay(!overlay)}>
                 <Image src="/icons/ham-menu.svg" layout='fill' objectFit='contain' />
             </div>

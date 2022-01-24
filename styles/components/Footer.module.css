@@ -1,14 +1,20 @@
+@font-face {
+    font-family: "NeueMachinaRegular";
+    src: url("../../assets/fonts/NeueMachina-Regular.otf");
+  }
+
 .footerContainer {
     text-align: center;
     padding: 8rem 0 3rem 0;
 }
 
 .footerTagLine {
-    color: #E1F484;
+    color: var(--theme-color);
     font-size: 4rem;
     font-weight: 500;
     margin-bottom: 4rem;
     padding: 0 1rem;
+    font-family: "NeueMachinaRegular";
 }
 
 .footerLink {
