@@ -7,7 +7,7 @@ export default function Button({ label, bg }) {
     return (
         <button className={`${styles.styledButton} ${bg && styles.styledButtonBG}`}>
             {label.map(el => (
-                <span>{el}<br /></span>
+                <span key={el}>{el}<br /></span>
             ))}
         </button>
     )
