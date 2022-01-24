@@ -35,8 +35,10 @@ export default function Home() {
         {/* <div className={styles.heroBG} /> */}
         <div className={styles.title}>PORTAL REALMS</div>
         <div className={styles.subTitle}>LAUNCHING MID FEB 2022</div>
-        <StyledButton marginRight="2rem" label1="WHITELIST / 0.05 Ξ" label2="10 FEB - 8PM CET" />
-        <StyledButton label1="PUBLIC MINT / 0.08 Ξ" bg={true} label2="24 FEB - 8PM CET" />
+
+        {/* using : as seperator in label */}
+        <StyledButton marginRight="2rem" label="WHITELIST / 0.05 Ξ :10 FEB - 8PM CET" />
+        <StyledButton label="PUBLIC MINT / 0.08 Ξ :24 FEB - 8PM CET" bg={true} />
 
         <div className={styles.cardContainer}>
           <div className={styles.imageWrapper}>
@@ -112,14 +114,12 @@ export default function Home() {
       {/* Roadmap Section */}
 
       <div className={styles.roadmapContainer} name='roadmap'>
-        <div className={styles.roadmapBG}>
-          <Image src='/images/roadmap-bg.svg' layout='fill' objectFit='contain' />
-        </div>
         <h1>Roadmap</h1>
         <div className={styles.roadmapCardsContainer}>
-          <RoadmapCard image="/images/ellipse.svg" year="2022" content="Obtainable Platform Live Xela: Spaceship XR Alpha $CTZN Private Round" />
-          <RoadmapCard image="/images/ellipse.svg" year="2022" content="Obtainable Platform Live Xela: Spaceship XR Alpha $CTZN Private Round " />
-          <RoadmapCard image="/images/ellipse.svg" year="2022" content="Obtainable Platform Live Xela: Spaceship XR Alpha $CTZN Private Round " />
+          {/* using : as seperator in content */}
+          <RoadmapCard image="/images/roadmap-img1.png" year="Q1 2022" content="→ Website goes live :→ Whitepaper published :→ Introduce faction and lores :→ 1st edition NFT drop" />
+          <RoadmapCard image="/images/roadmap-img2.png" year="Q2 2022" content="→ Publish core game mechanics :→ 1st citizen booster drop :→ Live playtest of game with community" />
+          <RoadmapCard image="/images/roadmap-img3.png" year="Q3-Q4 2022" content="→ Alpha game mainnet launch :→ Release marketplace :→ Release Grand Library :→ New expansion launch :→ First world tournament" />
         </div>
       </div>
 

@@ -1,8 +1,9 @@
 .container {
-    --width: 225px;
+    --width: 70px;
     position: relative;
     margin-right: 4rem;
     max-width: var(--width);
+    min-width: 250px;
 }
 
 .container:last-of-type {
@@ -13,11 +14,20 @@
     height: var(--width);
     width: var(--width);
     position: relative;
+    margin-bottom: 1rem;
+}
+
+.container h1 {
+    color: var(--theme-color);
+    margin: 0.5rem 0;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 .container p {
-    color: #E1F484;
+    color: var(--theme-color);
     margin: 0.5rem 0;
+    font-weight: lighter;
 }
 
 
